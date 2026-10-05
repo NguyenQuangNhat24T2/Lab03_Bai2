@@ -2,72 +2,45 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="24dp"
+    android:background="#FFFFFF">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="24dp"
         android:text="CHỈNH SỬA THÔNG TIN"
-        android:textColor="#1B2631"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="#212529"
+        android:layout_marginBottom="32dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Họ và tên:"
-        android:textStyle="bold" />
+        android:text="Nhập họ và tên mới:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#495057"
+        android:layout_marginBottom="8dp" />
 
     <EditText
         android:id="@+id/edtName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:hint="Nhập họ và tên" />
+        android:layout_height="50dp"
+        android:hint="Nhập họ tên tại đây"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginBottom="24dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lớp sinh hoạt:"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/edtClass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:hint="Nhập lớp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Điểm GPA (0.0 - 4.0):"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/edtGpa"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:hint="Nhập GPA"
-        android:inputType="numberDecimal" />
-
+    <!-- Nút Lưu & Quay lại -->
     <Button
-        android:id="@+id/btnSave"
+        android:id="@+id/btnSaveAndReturn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#34B469"
-        android:text="Lưu và Phản Hồi" />
+        android:layout_height="52dp"
+        android:backgroundTint="#198754"
+        android:text="Lưu &amp; Quay lại"
+        android:textSize="16sp" />
 
-    <Button
-        android:id="@+id/btnCancel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#9E9E9E"
-        android:text="Hủy Bỏ" />
 </LinearLayout>

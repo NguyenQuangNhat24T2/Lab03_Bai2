@@ -1,113 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4F6F9">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#F8F9FA">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:text="HỒ SƠ NGƯỜI DÙNG"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#212529"
+        android:layout_marginBottom="30dp" />
 
-        <!-- CardView Hồ Sơ Sinh Viên -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="6dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Họ và tên hiện tại:"
+        android:textSize="16sp"
+        android:textColor="#6C757D" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="20dp">
+    <!-- Hiển thị họ tên hiện tại (Mặc định: 'Chưa có thông tin') -->
+    <TextView
+        android:id="@+id/tvCurrentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chưa có thông tin"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#0D6EFD"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="40dp" />
 
-                <ImageView
-                    android:id="@+id/imgAvatar"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:background="#E0E0E0"
-                    android:scaleType="centerCrop"
-                    android:src="@mipmap/ic_launcher" />
+    <!-- Nút bấm Chỉnh sửa thông tin -->
+    <Button
+        android:id="@+id/btnEditProfile"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Chỉnh sửa thông tin"
+        android:textSize="16sp"
+        android:backgroundTint="#0D6EFD" />
 
-                <TextView
-                    android:id="@+id/tvName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:textColor="#1B2631"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvDetails"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:textColor="#555555"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/tvGpaBadge"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="#E8F8F5"
-                    android:paddingHorizontal="12dp"
-                    android:paddingVertical="4dp"
-                    android:textColor="#1ABC9C"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Nút 1: Chỉnh sửa (Result API - Bài 4) -->
-        <Button
-            android:id="@+id/btnEditProfile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:backgroundTint="#34B469"
-            android:text="Chỉnh Sửa Hồ Sơ (Result API)" />
-
-        <!-- Nút 2: Đổi Avatar (GetContent - Bài 5) -->
-        <Button
-            android:id="@+id/btnChangeAvatar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:backgroundTint="#00BCD4"
-            android:text="Đổi Avatar từ Gallery (GetContent)" />
-
-        <!-- Nút 3: Gọi Cố vấn (Implicit Intent - Bài 3) -->
-        <Button
-            android:id="@+id/btnCallHotline"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:backgroundTint="#4E5D6C"
-            android:text="Gọi Cố Vấn Học Tập (Implicit)" />
-
-        <!-- Nút 4: Xin quyền Camera (RequestPermission - Bài 6) -->
-        <Button
-            android:id="@+id/btnRequestCamera"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:backgroundTint="#FF9800"
-            android:text="Kiểm Tra Quyền Camera (Permission)" />
-
-        <!-- Nút 5: Mở bản đồ UTE (Mở rộng Slide 27) -->
-        <Button
-            android:id="@+id/btnOpenMap"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#2196F3"
-            android:text="Xem Bản Đồ Trường Học (Maps)" />
-
-    </LinearLayout>
-</ScrollView>
+</LinearLayout>
